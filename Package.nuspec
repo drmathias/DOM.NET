@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DOM.NET</id>
+    <version>1.0.0-alpha</version>
+    <authors>Adam Shirt</authors>
+    <owners>Adam Shirt</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <projectUrl>https://github.com/drmathias/DOM.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      An API wrapper for interacting with the DOM API in .NET
+    </description>
+    <copyright>Copyright 2019</copyright>
+    <tags>HTML DOM Blazor</tags>
+    <dependencies>
+      <dependency id="Microsoft.JSInterop" version="0.7.0" />
+    </dependencies>
+  </metadata>
+</package>
