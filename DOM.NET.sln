@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOM.Standard", "DOM.Standard\DOM.Standard.csproj", "{ED4DEE92-667A-428C-BEEF-03ECAADC6328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.Standard", "DOM.Standard\DOM.Standard.csproj", "{ED4DEE92-667A-428C-BEEF-03ECAADC6328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOM.Experimental", "DOM.Experimental\DOM.Experimental.csproj", "{5B846C7D-3D48-4186-93EC-DC29666238DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.Experimental", "DOM.Experimental\DOM.Experimental.csproj", "{5B846C7D-3D48-4186-93EC-DC29666238DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
