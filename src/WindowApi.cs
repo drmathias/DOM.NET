@@ -36,7 +36,7 @@ namespace DOM.NET
             set => _jsRuntime.InvokeAsync<object>("setStatus", value);
         }
 
-        public EventHandler<ScrollEventArgs> ScrollEvent { get; }
+        public EventHandler<ScrollEventArgs> ScrollEvent { get; set; }
 
         [JSInvokable]
         public void OnScroll(double scrollX, double scrollY)

@@ -61,6 +61,6 @@ namespace DOM.NET
         /// <summary>
         /// The scroll event fires when the user scrolls the window. This event is invoked when window.onscroll is called.
         /// </summary>
-        EventHandler<ScrollEventArgs> ScrollEvent { get; }
+        EventHandler<ScrollEventArgs> ScrollEvent { get; set; }
     }
 }
