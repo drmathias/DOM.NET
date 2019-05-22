@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DOM.Standard.Events
+namespace DOM.NET.Events
 {
     public class ScrollEventArgs : EventArgs
     {

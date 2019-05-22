@@ -3,13 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.Standard", "DOM.Standard\DOM.Standard.csproj", "{ED4DEE92-667A-428C-BEEF-03ECAADC6328}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.Experimental", "DOM.Experimental\DOM.Experimental.csproj", "{5B846C7D-3D48-4186-93EC-DC29666238DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.NET", "src\DOM.NET.csproj", "{ED4DEE92-667A-428C-BEEF-03ECAADC6328}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8EAEC6F-9191-432B-9243-C30694C073F9}"
 	ProjectSection(SolutionItems) = preProject
 		Package.nuspec = Package.nuspec
+		js\WindowApi.js = js\WindowApi.js
 	EndProjectSection
 EndProject
 Global
@@ -22,10 +21,6 @@ Global
 		{ED4DEE92-667A-428C-BEEF-03ECAADC6328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED4DEE92-667A-428C-BEEF-03ECAADC6328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED4DEE92-667A-428C-BEEF-03ECAADC6328}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B846C7D-3D48-4186-93EC-DC29666238DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B846C7D-3D48-4186-93EC-DC29666238DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B846C7D-3D48-4186-93EC-DC29666238DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B846C7D-3D48-4186-93EC-DC29666238DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

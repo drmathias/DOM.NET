@@ -1,7 +1,7 @@
-﻿using DOM.Standard.Events;
+﻿using DOM.NET.Events;
 using System;
 
-namespace DOM.Standard
+namespace DOM.NET
 {
     /// <summary>
     /// Represents the standardised DOM window API.
