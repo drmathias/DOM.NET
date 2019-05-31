@@ -10,7 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  buildConfig: 'release'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -18,17 +19,18 @@ steps:
     command: 'restore'
     feedsToUse: 'select'
 
-- task: DotNetCoreCLI@2
+- task: MSBuild@1
   inputs:
-    command: 'build'
-    configuration: '$(buildConfig)'
+    solution: '**/*.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
-    configuration: '$(buildConfig)'
+    configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   inputs:
