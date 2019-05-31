@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  buildConfig: 'release'
+
 steps:
 - task: DotNetCoreCLI@2
   inputs:
@@ -18,13 +21,14 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    configuration: '$(buildConfig)'
 
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
-    configuration: 'release'
+    configuration: '$(buildConfig)'
 
 - task: DotNetCoreCLI@2
   inputs:
