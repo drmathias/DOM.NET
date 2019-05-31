@@ -13,15 +13,18 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '**/*.csproj'
+    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'off'
     configuration: 'release'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'push'
-    nuGetFeedType: external
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
     publishFeedCredentials: 'NuGet.org'
