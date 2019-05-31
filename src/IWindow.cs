@@ -1,13 +1,19 @@
 ﻿using DOM.NET.Events;
 using System;
+using System.Threading.Tasks;
 
 namespace DOM.NET
 {
     /// <summary>
     /// Represents the standardised DOM window API.
     /// </summary>
-    public interface IWindowApi
+    public interface IWindow
     {
+        /// <summary>
+        /// Returns a reference to the document interface.
+        /// </summary>
+        IDocument Document { get; }
+
         /// <summary>
         /// Indicates whether the window is displayed in full screen mode or not.
         /// </summary>
@@ -62,5 +68,8 @@ namespace DOM.NET
         /// The scroll event fires when the user scrolls the window. This event is invoked when window.onscroll is called.
         /// </summary>
         EventHandler<ScrollEventArgs> ScrollEvent { get; set; }
+
+        Task Alert(string message);
+        Task Blur();
     }
 }

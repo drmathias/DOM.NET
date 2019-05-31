@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.0-alpha</Version>
+    <Version>0.1.3-alpha</Version>
     <Authors>Adam Shirt</Authors>
     <Product>DOM.NET</Product>
     <Description>An API wrapper for interacting with the DOM API in .NET</Description>
     <RepositoryUrl>https://github.com/drmathias/DOM.NET</RepositoryUrl>
-    <PackageTags>HTML DOM Blazor</PackageTags>
+    <PackageTags>HTML HTML5 DOM JSInterop Blazor</PackageTags>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
 

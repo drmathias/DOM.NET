@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOM.NET", "src\DOM.NET.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8EAEC6F-9191-432B-9243-C30694C073F9}"
 	ProjectSection(SolutionItems) = preProject
+		js\DocumentApi.js = js\DocumentApi.js
 		js\WindowApi.js = js\WindowApi.js
 	EndProjectSection
 EndProject
