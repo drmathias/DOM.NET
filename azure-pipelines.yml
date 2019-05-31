@@ -1,0 +1,27 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    configuration: 'release'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'push'
+    nuGetFeedType: external
+    publishFeedCredentials: 'NuGet.org'
