@@ -7,7 +7,7 @@ namespace DOM.NET
     /// <summary>
     /// Represents the standardised DOM window API.
     /// </summary>
-    public interface IWindow
+    public interface IWindow : IEventTarget
     {
         /// <summary>
         /// Returns a reference to the document interface.
@@ -69,7 +69,17 @@ namespace DOM.NET
         /// </summary>
         EventHandler<ScrollEventArgs> ScrollEvent { get; set; }
 
+        /// <summary>
+        /// Displays an alert dialog with the optional specified content and an OK button.
+        /// </summary>
+        /// <param name="message">The message to display in the alert.</param>
+        /// <returns>A task for the action.</returns>
         Task Alert(string message);
+
+        /// <summary>
+        /// Shifts focus away from the window.
+        /// </summary>
+        /// <returns>A task for the action.</returns>
         Task Blur();
     }
 }

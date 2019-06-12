@@ -39,7 +39,7 @@ window.windowApi = {
     setStatus: function (status) {
         window.status = status;
     },
-    subscribeToEvents: function (blazorWindowApi) {
+    subscribe: function (blazorWindowApi) {
         dotnetBlazorWindowApi = blazorWindowApi;
     },
     alert: function (message) {

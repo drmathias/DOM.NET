@@ -23,9 +23,9 @@ namespace DOM.NET
             return _jsRuntime.InvokeAsync<object>("elementApi.scrollIntoView", _reference);
         }
 
-        ~Element()
+        protected override void Dispose(bool disposing)
         {
-            _jsRuntime.Invoke<object>("elementApi.dereference", _reference);
+            _jsRuntime.Invoke<object>("elementApi.dispose", _reference);
         }
     }
 }

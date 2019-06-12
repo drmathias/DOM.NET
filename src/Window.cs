@@ -8,15 +8,15 @@ namespace DOM.NET
     /// <summary>
     /// An interop of the DOM Window API accessed via JavaScript.
     /// </summary>
-    public class Window : IWindow
+    public class Window : EventTarget, IWindow
     {
-        private readonly IJSInProcessRuntime _jsRuntime;
+        private readonly DotNetObjectRef _windowObjectRef;
 
-        public Window(IJSRuntime jsRuntime)
+        public Window(IJSRuntime jsRuntime) : base(jsRuntime)
         {
             Document = new Document(jsRuntime);
-            _jsRuntime = (IJSInProcessRuntime)jsRuntime;
-            _jsRuntime.InvokeAsync<object>("windowApi.subscribeToEvents", new DotNetObjectRef(this));
+            _windowObjectRef = new DotNetObjectRef(this);
+            _jsRuntime.InvokeAsync<object>("windowApi.subscribe", _windowObjectRef);
         }
 
         public IDocument Document { get; }
@@ -55,6 +55,12 @@ namespace DOM.NET
         public void OnScroll(double scrollX, double scrollY)
         {
             ScrollEvent?.Invoke(this, new ScrollEventArgs(scrollX, scrollY));
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _jsRuntime.UntrackObjectRef(_windowObjectRef);
+            base.Dispose(disposing);
         }
     }
 }

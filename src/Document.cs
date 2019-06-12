@@ -3,13 +3,10 @@ using System.Threading.Tasks;
 
 namespace DOM.NET
 {
-    public class Document : IDocument
+    public class Document : EventTarget, IDocument
     {
-        private readonly IJSRuntime _jsRuntime;
-
-        internal Document(IJSRuntime jsRuntime)
+        internal Document(IJSRuntime jsRuntime) : base(jsRuntime)
         {
-            _jsRuntime = (IJSInProcessRuntime)jsRuntime;
         }
 
         public async Task<IElement> GetElementById(string id)

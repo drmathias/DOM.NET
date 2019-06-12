@@ -23,7 +23,7 @@ window.elementApi = {
     scrollIntoView: function (elementKey) {
         elementReferences[elementKey].scrollIntoView();
     },
-    derefence: function (elementKey) {
+    dispose: function (elementKey) {
         elementReferences[elementKey] = null;
     }
 };

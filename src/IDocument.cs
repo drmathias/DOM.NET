@@ -5,7 +5,7 @@ namespace DOM.NET
     /// <summary>
     /// Represents the standardised DOM document API.
     /// </summary>
-    public interface IDocument
+    public interface IDocument : IEventTarget
     {
         /// <summary>
         /// Returns an Element object representing the element whose id property matches the specified string.
